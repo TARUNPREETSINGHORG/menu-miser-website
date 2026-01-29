@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+:root {
+  /* Deep blacks */
+  --bg: #0A0A0A;
+  --bg-elevated: #141414;
+  /* Orange – #EF8E35 */
+  --orange: #EF8E35;
+  --orange-hover: #DD7D25;
+  --orange-muted: rgba(239, 142, 53, 0.2);
+  /* UI */
+  --text: #FFFFFF;
+  --text-muted: #A0A0A0;
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-orange: rgba(239, 142, 53, 0.25);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-orange: var(--orange);
+  --color-orange-hover: var(--orange-hover);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --font-sans: var(--font-heading), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@keyframes warm-glow {
+  0%, 100% { opacity: 0.08; }
+  50% { opacity: 0.12; }
+}
+
+/* Scroll-triggered entrance animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-entrance {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: none;
+}
+
+.animate-entrance.animate-visible {
+  animation-duration: 0.6s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: forwards;
+}
+
+.animate-entrance.animate-fade-in-up.animate-visible {
+  animation-name: fade-in-up;
+}
+
+.animate-entrance.animate-fade-in {
+  transform: none;
+}
+.animate-entrance.animate-fade-in.animate-visible {
+  animation-name: fade-in;
+}
+
+.animate-entrance.animate-fade-in-scale {
+  transform: scale(0.96);
+}
+.animate-entrance.animate-fade-in-scale.animate-visible {
+  animation-name: fade-in-scale;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-entrance {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-entrance.animate-visible {
+    animation: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border-orange);
+  border-radius: 24px;
+}
+
+/* Solid orange accent text */
+.text-orange-accent {
+  color: var(--orange);
+}
+
+/* Solid orange button */
+.btn-orange {
+  background: var(--orange);
+  color: white;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.btn-orange:hover {
+  background: var(--orange-hover);
+  box-shadow: 0 0 24px rgba(239, 142, 53, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Card hover – subtle orange tint */
+.glass-hover:hover {
+  border-color: var(--glass-border-orange);
+  box-shadow: 0 0 24px rgba(239, 142, 53, 0.1);
+}
+
+/* Custom cursor (desktop) */
+body.custom-cursor-active {
+  cursor: none;
+}
+body.custom-cursor-active a,
+body.custom-cursor-active button {
+  cursor: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
