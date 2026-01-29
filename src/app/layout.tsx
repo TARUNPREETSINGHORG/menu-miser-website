@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
-import dynamic from "next/dynamic";
-
-const Analytics = dynamic(() => import("@vercel/analytics/react").then((m) => m.Analytics), { ssr: false });
 import { Nav } from "@/components/Nav";
 import { LayoutContent } from "@/components/LayoutContent";
 import { CustomCursor } from "@/components/CustomCursor";
+import { AnalyticsWrapper } from "@/components/Analytics";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -49,7 +47,7 @@ export default function RootLayout({
         <CustomCursor />
         <Nav />
         <LayoutContent>{children}</LayoutContent>
-        <Analytics />
+        <AnalyticsWrapper />
       </body>
     </html>
   );
