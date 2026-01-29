@@ -43,11 +43,10 @@ export function Hero() {
                 muted
                 loop
                 playsInline
-                poster="/hero-demo-poster.jpg"
                 aria-label="App demo"
                 onError={() => setVideoError(true)}
               >
-                <source src="/hero-demo.mp4" type="video/mp4" />
+                <source src="/hero-demo.MP4" type="video/mp4" />
               </video>
             ) : null}
             {videoError && (
