@@ -13,8 +13,11 @@ export function CustomCursor() {
   const targetRef = useRef({ x: -100, y: -100 });
 
   useEffect(() => {
-    const hasPointer = typeof window !== "undefined" && window.matchMedia("(pointer: fine)").matches;
-    setMounted(hasPointer);
+    if (typeof window === "undefined") return;
+    // Only enable custom cursor on desktop with mouse; disable on iOS/touch to avoid rAF loop and stuck loading
+    const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+    const hasHover = window.matchMedia("(hover: hover)").matches;
+    setMounted(hasFinePointer && hasHover);
   }, []);
 
   useEffect(() => {

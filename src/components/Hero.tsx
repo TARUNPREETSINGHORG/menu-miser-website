@@ -43,6 +43,7 @@ export function Hero() {
                 muted
                 loop
                 playsInline
+                preload="metadata"
                 aria-label="App demo"
                 onError={() => setVideoError(true)}
               >
