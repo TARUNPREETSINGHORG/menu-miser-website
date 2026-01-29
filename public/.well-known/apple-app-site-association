@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "2HSDVU2LN9.com.singhts.menumiserapp",
+        "paths": ["/*"]
+      }
+    ]
+  }
+}
