@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { Nav } from "@/components/Nav";
 import { LayoutContent } from "@/components/LayoutContent";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -44,6 +45,7 @@ export default function RootLayout({
         <CustomCursor />
         <Nav />
         <LayoutContent>{children}</LayoutContent>
+        <Analytics />
       </body>
     </html>
   );
