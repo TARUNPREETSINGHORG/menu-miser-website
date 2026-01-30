@@ -18,6 +18,21 @@ Update the download links in `src/components/AppDownloadButtons.tsx`:
 - `ANDROID_LINK` – Your Google Play Store URL
 - iOS – Currently shows "Coming soon"; replace with App Store link when available
 
+## AASA (Apple App Site Association)
+
+The site serves an AASA file at `/.well-known/apple-app-site-association` for **Universal Links** and **web credentials** (e.g. Sign in with Apple). After deploy, it will be at `https://menumiser.co/.well-known/apple-app-site-association`.
+
+**Before it works with your iOS app:**
+
+1. **Replace `TEAM_ID`** in `public/.well-known/apple-app-site-association` with your Apple Team ID (10 characters, from [developer.apple.com](https://developer.apple.com) → Membership).
+2. **Bundle ID** is set to `com.singhts.menumiserapp` (from your Play Store link). If your iOS app uses a different bundle ID, change it in the AASA file.
+3. **In Xcode:** Add the **Associated Domains** capability with:
+   - `applinks:menumiser.co` (and `applinks:www.menumiser.co` if you use www)
+   - `webcredentials:menumiser.co` (if you use web credentials)
+4. Redeploy so the updated AASA is live. Apple caches the file; allow a few hours for propagation.
+
+**Validate:** [Apple’s AASA validator](https://search.developer.apple.com/appsearch-validation-tool/) or open `https://menumiser.co/.well-known/apple-app-site-association` in a browser after deploy.
+
 ## Run locally
 
 ```bash

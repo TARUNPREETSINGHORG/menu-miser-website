@@ -69,6 +69,24 @@ You need to point **menumiser.co** (and **www.menumiser.co**) to the new host in
 4. Save DNS. Propagation can take from a few minutes up to 48 hours (often 15–30 minutes).
 5. In Vercel (or your host), ensure the domain is **Verified** and SSL is active.
 
+#### Wix not accepting Vercel’s Name/Value?
+
+Wix’s DNS UI can be strict. Try this:
+
+- **Root domain (menumiser.co) – A record**
+  - **Name/Host:** If Wix rejects `@`, try leaving the host field **blank** or use **apex** (Wix sometimes uses “Host” and expects blank for root).
+  - **Value:** Use Vercel’s IP. If the new one is rejected, use the **older** value Vercel still supports: **`76.76.21.21`** (Vercel says this continues to work).
+
+- **www – CNAME record**
+  - **Name/Host:** `www` (no dot, no domain).
+  - **Value:** Try **without** the trailing dot. For example use `46f15e8a070eb448.vercel-dns-017.com` instead of `46f15e8a070eb448.vercel-dns-017.com.`  
+  - If that still fails, use the **older** CNAME target: **`cname.vercel-dns.com`** (no trailing dot). Vercel still accepts this.
+
+- **Alternative: use Vercel nameservers**
+  - In Vercel: **Settings → Domains** → your domain → **Vercel DNS** (or “Use Vercel nameservers”). Vercel will show two nameservers (e.g. `ns1.vercel-dns.com`, `ns2.vercel-dns.com`).
+  - In **Wix**: Domains → your domain → **Manage** or **Advanced** → **Change nameservers** (or “Point to external DNS”). Replace Wix’s nameservers with Vercel’s two nameservers and save.
+  - After that, DNS is managed in Vercel only; you don’t add A/CNAME records in Wix. Verification and SSL in Vercel usually complete within a few minutes to an hour.
+
 ### If the domain is at another registrar (not Wix)
 
 1. Log in at the registrar where **menumiser.co** is registered.

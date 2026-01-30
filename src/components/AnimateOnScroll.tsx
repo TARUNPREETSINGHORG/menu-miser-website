@@ -28,24 +28,48 @@ export function AnimateOnScroll({
     const el = ref.current;
     if (!el) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setVisible(true);
-          } else if (!once) {
-            setVisible(false);
-          }
-        });
-      },
-      {
-        threshold,
-        rootMargin: "0px 0px -40px 0px",
-      }
-    );
+    let observer: IntersectionObserver | null = null;
+    let idleCallbackId: number | null = null;
 
-    observer.observe(el);
-    return () => observer.disconnect();
+    // Use requestIdleCallback for better performance on mobile
+    const initObserver = () => {
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setVisible(true);
+              if (once && observer) {
+                observer.unobserve(entry.target);
+              }
+            } else if (!once) {
+              setVisible(false);
+            }
+          });
+        },
+        {
+          threshold,
+          rootMargin: "0px 0px -40px 0px",
+        }
+      );
+
+      observer.observe(el);
+    };
+
+    // Use requestIdleCallback if available, otherwise immediate
+    if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+      idleCallbackId = requestIdleCallback(initObserver, { timeout: 2000 });
+    } else {
+      initObserver();
+    }
+
+    return () => {
+      if (idleCallbackId !== null && typeof window !== "undefined" && "cancelIdleCallback" in window) {
+        cancelIdleCallback(idleCallbackId);
+      }
+      if (observer) {
+        observer.disconnect();
+      }
+    };
   }, [once, threshold]);
 
   return (
