@@ -63,12 +63,14 @@
   opacity: 0;
   transform: translateY(28px);
   transition: none;
+  will-change: opacity, transform;
 }
 
 .animate-entrance.animate-visible {
   animation-duration: 0.6s;
   animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
   animation-fill-mode: forwards;
+  will-change: auto;
 }
 
 .animate-entrance.animate-fade-in-up.animate-visible {
@@ -124,6 +126,19 @@ body {
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border-orange);
   border-radius: 24px;
+}
+
+/* Reduce blur on mobile for better performance */
+@media (max-width: 768px) {
+  .glass {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .glass-strong {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 
 /* Solid orange accent text */

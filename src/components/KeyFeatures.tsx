@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   ShoppingBasket,
   Sparkles,
@@ -41,7 +42,15 @@ export function KeyFeatures() {
               <div className="glass glass-hover flex flex-col overflow-hidden rounded-2xl p-6 transition-all duration-300" data-cursor-hover>
                 <div className="relative aspect-[9/16] w-full overflow-hidden rounded-xl bg-[var(--bg-elevated)]">
                   {!imageErrors[id] ? (
-                    <img src={image} alt="" className="h-full w-full object-cover object-top" onError={() => setError(id)} />
+                    <Image 
+                      src={image} 
+                      alt="" 
+                      fill
+                      className="object-cover object-top" 
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                      onError={() => setError(id)} 
+                    />
                   ) : null}
                   {imageErrors[id] && (
                     <div className="absolute inset-0 flex items-center justify-center">

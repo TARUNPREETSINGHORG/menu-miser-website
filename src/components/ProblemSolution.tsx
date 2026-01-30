@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimateOnScroll } from "./AnimateOnScroll";
 
 export function ProblemSolution() {
@@ -30,10 +31,13 @@ export function ProblemSolution() {
           <div className="relative overflow-hidden rounded-2xl glass glass-hover p-1 transition-all duration-300">
             <div className="relative aspect-[9/16] w-full max-w-sm overflow-hidden rounded-xl bg-[var(--bg-elevated)] mx-auto lg:max-w-none">
               {!imgError ? (
-                <img
+                <Image
                   src="/problem-solution-screenshot.png"
                   alt="Menu Miser app showing meal plan from pantry"
-                  className="h-full w-full object-cover object-top"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                   onError={() => setImgError(true)}
                 />
               ) : null}
