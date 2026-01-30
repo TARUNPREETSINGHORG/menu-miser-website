@@ -8,7 +8,7 @@ import { AnimateOnScroll } from "./AnimateOnScroll";
 export function Hero() {
   const [videoError, setVideoError] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(true); // Start with true to load immediately
 
   useEffect(() => {
     // Detect mobile devices
@@ -16,29 +16,13 @@ export function Hero() {
       const isMobileDevice = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || 
                             window.innerWidth < 768;
       setIsMobile(isMobileDevice);
-      // Only load video after initial render and on non-mobile or when user scrolls
-      if (!isMobileDevice) {
-        setShouldLoadVideo(true);
-      }
+      // Always load video, but we'll optimize autoplay and preload based on device
+      setShouldLoadVideo(true);
     };
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-
-  // Load video on scroll for mobile
-  useEffect(() => {
-    if (isMobile) {
-      const handleScroll = () => {
-        if (window.scrollY > 100) {
-          setShouldLoadVideo(true);
-          window.removeEventListener('scroll', handleScroll);
-        }
-      };
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  }, [isMobile]);
 
   return (
     <section className="relative flex min-h-[90vh] flex-col items-center justify-center px-4 py-24 text-center sm:px-6 sm:py-32 lg:px-8">
@@ -68,23 +52,22 @@ export function Hero() {
         {/* Hero App Demo Video – add hero-demo.mp4 to /public */}
         <div className="mx-auto mt-16 w-full max-w-4xl overflow-hidden rounded-2xl glass glass-hover border-[var(--glass-border-orange)] p-1 transition-all duration-300">
           <div className="relative mx-auto aspect-[9/16] w-full max-w-[280px] overflow-hidden rounded-xl bg-[var(--bg-elevated)] sm:max-w-[320px]">
-            {shouldLoadVideo && !videoError ? (
+            {!videoError ? (
               <video
                 className="h-full w-full object-cover"
-                autoPlay={!isMobile}
+                autoPlay
                 muted
                 loop
                 playsInline
-                preload={isMobile ? "none" : "metadata"}
+                preload={isMobile ? "metadata" : "auto"}
                 aria-label="App demo"
                 onError={() => setVideoError(true)}
               >
                 <source src="/hero-demo.MP4" type="video/mp4" />
               </video>
-            ) : null}
-            {(!shouldLoadVideo || videoError) && (
+            ) : (
               <div className="absolute inset-0 flex items-center justify-center p-8 text-center text-sm text-[var(--text-muted)]">
-                {videoError ? "[VIDEO: Add hero-demo.mp4 (15–30s) to /public]" : ""}
+                [VIDEO: Add hero-demo.mp4 (15–30s) to /public]
               </div>
             )}
           </div>
