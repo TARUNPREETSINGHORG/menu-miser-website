@@ -21,7 +21,7 @@ export function Footer() {
             <div>
               <h3 className="text-sm font-semibold text-white">Product</h3>
               <ul className="mt-3 space-y-2">
-                <li><Link href="/about" className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/about-6" className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">About</Link></li>
                 <li><Link href="/faq-s" className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">FAQs</Link></li>
                 <li><Link href="/contact" className="text-sm text-[var(--text-muted)] hover:text-white transition-colors">Contact</Link></li>
               </ul>
