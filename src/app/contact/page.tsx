@@ -19,7 +19,7 @@ export default function ContactPage() {
         <ul className="mt-4 space-y-3 text-[var(--text-muted)]">
           <li>
             <strong className="text-white">Email:</strong>{" "}
-            <a href="mailto:menumiser@gmail.com" className="text-[var(--orange)] underline hover:no-underline">menumiser@gmail.com</a>
+            <a href="mailto:info@jimmystudio.dev" className="text-[var(--orange)] underline hover:no-underline">info@jimmystudio.dev</a>
           </li>
           <li>
             <strong className="text-white">App support:</strong> Email us or use the

@@ -10,7 +10,7 @@ export default function TermsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <h1 className="text-3xl font-bold text-white sm:text-4xl">Terms of Service</h1>
-      <p className="mt-2 text-sm text-[var(--text-muted)]">Last Updated: December 2025</p>
+      <p className="mt-2 text-sm text-[var(--text-muted)]">Last Updated: February 2026</p>
 
       <p className="mt-8 text-[var(--text-muted)] leading-relaxed">
         These Terms of Service (&quot;Terms&quot;) govern your access to and use of Menu Miser (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), a mobile application that provides AI-powered meal planning services (the &quot;App&quot; or &quot;Service&quot;). By accessing or using Menu Miser, you agree to be bound by these Terms.
@@ -85,8 +85,8 @@ export default function TermsPage() {
             <li><strong className="text-white">Kitchen Assistant:</strong> Limited access (if available, subject to rate limits: 5 daily text queries).</li>
             <li><strong className="text-white">Saved Quick Meals:</strong> Not available.</li>
           </ul>
-          <h3 className="mt-4 text-lg font-medium text-white">4.2 Pro Tier (Tier1)</h3>
-          <p className="mt-1 leading-relaxed">The Pro tier subscription ($5.99/month) includes the following features:</p>
+          <h3 className="mt-4 text-lg font-medium text-white">4.2 Menu Miser Pro</h3>
+          <p className="mt-1 leading-relaxed">The Pro tier subscription includes the following features:</p>
           <ul className="mt-2 list-inside list-disc space-y-1 leading-relaxed">
             <li><strong className="text-white">Meal Plan Generations:</strong> Unlimited meal plan generations.</li>
             <li><strong className="text-white">Generation Cooldown:</strong> No cooldown period between generations (Cannot have two meal plan generations at one time).</li>
@@ -110,13 +110,13 @@ export default function TermsPage() {
           <h2 className="text-xl font-semibold text-white">5. Subscriptions and Payments</h2>
           <h3 className="mt-4 text-lg font-medium text-white">5.1 Subscription Fees</h3>
           <p className="mt-1 leading-relaxed">
-            Pro tier subscriptions are billed monthly at $5.99 per month. Prices are subject to change with notice.
+            Pro tier subscriptions are billed monthly or annually based on the subscription plan chosen by a customer. Prices are subject to change with notice.
           </p>
           <h3 className="mt-4 text-lg font-medium text-white">5.2 Payment Processing</h3>
           <p className="mt-1 leading-relaxed">Payments are processed through:</p>
           <ul className="mt-2 list-inside list-disc space-y-1 leading-relaxed">
             <li>Google Play Services (for Android devices)</li>
-            <li>Apple App Store (for iOS devices)</li>
+            <li>Apple ID (for iOS devices)</li>
             <li>RevenueCat (for subscription management)</li>
           </ul>
           <p className="mt-2 leading-relaxed">
@@ -317,9 +317,34 @@ export default function TermsPage() {
             If you have any questions about these Terms, please contact us at:
           </p>
           <p className="mt-2">
-            <a href="mailto:menumiser@gmail.com" className="text-[var(--orange)] underline hover:no-underline">menumiser@gmail.com</a>
+            <a href="mailto:info@jimmystudio.dev" className="text-[var(--orange)] underline hover:no-underline">info@jimmystudio.dev</a>
           </p>
-          <p className="mt-6 text-sm text-[var(--text-muted)]">Effective Date: December 2025</p>
+          <p className="mt-2 text-[var(--text-muted)]">
+            Mailing Address: 158 Wheat Lane, Kitchener, Ontario, N2R 0R4
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-white">18. Apple App Store Supplemental Terms</h2>
+          <p className="mt-2 leading-relaxed">
+            You and Menu Miser acknowledge that these Terms are concluded between you and Menu Miser only, and not with Apple, and Menu Miser, not Apple, is solely responsible for the Licensed Application and the content thereof.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            Menu Miser is solely responsible for providing any maintenance and support services with respect to the App. You acknowledge that Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the App.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price for the App to you; and that, to the maximum extent permitted by applicable law, Apple will have no other warranty obligation whatsoever with respect to the App.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            You acknowledge that Menu Miser, not Apple, is responsible for addressing any claims relating to the App or your possession and/or use of that App, including, but not limited to: (i) product liability claims; (ii) any claim that the App fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection, privacy, or similar legislation.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            You represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a &quot;terrorist supporting&quot; country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            You acknowledge and agree that Apple, and Apple’s subsidiaries, are third party beneficiaries of these Terms, and that, upon your acceptance of these Terms, Apple will have the right (and will be deemed to have accepted the right) to enforce these Terms against you as a third party beneficiary thereof.
+          </p>
+          <p className="mt-8 text-sm text-[var(--text-muted)]">Effective Date: February 2026</p>
         </section>
       </div>
     </div>

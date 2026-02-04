@@ -187,7 +187,7 @@ export default function PrivacyPolicyPage() {
           <h3 className="mt-6 text-lg font-medium text-white">How to Exercise Your Rights</h3>
           <p className="mt-2 leading-relaxed">
             To exercise any of these rights, please contact us at:{" "}
-            <a href="mailto:menumiser@gmail.com" className="text-[var(--orange)] underline hover:no-underline">menumiser@gmail.com</a>
+            <a href="mailto:info@jimmystudio.dev" className="text-[var(--orange)] underline hover:no-underline">info@jimmystudio.dev</a>
           </p>
           <p className="mt-2 leading-relaxed">
             We will respond to your request within 30 days (or as required by applicable law). We may need to verify your identity before processing your request.
@@ -201,7 +201,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold text-white">8. Children&apos;s Privacy</h2>
           <p className="mt-2 leading-relaxed">
             Menu Miser is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us at{" "}
-            <a href="mailto:menumiser@gmail.com" className="text-[var(--orange)] underline hover:no-underline">menumiser@gmail.com</a>, and we will delete such information.
+            <a href="mailto:info@jimmystudio.dev" className="text-[var(--orange)] underline hover:no-underline">info@jimmystudio.dev</a>, and we will delete such information.
           </p>
         </section>
 
@@ -241,7 +241,7 @@ export default function PrivacyPolicyPage() {
             If you have any questions about this Privacy Policy, wish to exercise your privacy rights, or have concerns about how we handle your personal information, please contact us at:
           </p>
           <p className="mt-2">
-            <a href="mailto:menumiser@gmail.com" className="text-[var(--orange)] underline hover:no-underline">menumiser@gmail.com</a>
+            <a href="mailto:info@jimmystudio.dev" className="text-[var(--orange)] underline hover:no-underline">info@jimmystudio.dev</a>
           </p>
           <p className="mt-2 leading-relaxed">
             We will respond to your inquiry as soon as possible.

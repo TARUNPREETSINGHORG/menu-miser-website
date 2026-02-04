@@ -250,7 +250,7 @@ const sections: { title: string; faqs: { q: string; a: string | string[] }[] }[]
       {
         q: "How do I get support?",
         a: [
-          "Email us at menumiser@gmail.com",
+          "Email us at info@jimmystudio.dev",
           "Submit feedback through the app (Settings → Feedback)",
           "Website: https://www.menumiser.co",
         ],
@@ -341,8 +341,8 @@ export default function FAQPage() {
         <ul className="mt-4 space-y-2 text-[var(--text-muted)]">
           <li>
             <strong className="text-white">Email:</strong>{" "}
-            <a href="mailto:menumiser@gmail.com" className="text-[var(--orange)] underline hover:no-underline">
-              menumiser@gmail.com
+            <a href="mailto:info@jimmystudio.dev" className="text-[var(--orange)] underline hover:no-underline">
+              info@jimmystudio.dev
             </a>
           </li>
           <li>
