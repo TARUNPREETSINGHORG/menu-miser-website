@@ -4,7 +4,7 @@ Marketing website for the Menu Miser app. Built with Next.js and Tailwind CSS.
 
 ## Pages
 
-- **Home** – Hero, features, and app download (Android + iOS coming soon)
+- **Home** – Hero, features, and app download (iOS)
 - **About** – Mission and what we offer
 - **FAQs** – Frequently asked questions (`/faq-s`)
 - **Contact** – How to reach support
@@ -15,8 +15,7 @@ Marketing website for the Menu Miser app. Built with Next.js and Tailwind CSS.
 
 Update the download links in `src/components/AppDownloadButtons.tsx`:
 
-- `ANDROID_LINK` – Your Google Play Store URL
-- iOS – Currently shows "Coming soon"; replace with App Store link when available
+- `APPLE_LINK` – Your App Store link
 
 ## AASA (Apple App Site Association)
 
@@ -25,7 +24,7 @@ The site serves an AASA file at `/.well-known/apple-app-site-association` for **
 **Before it works with your iOS app:**
 
 1. **Replace `TEAM_ID`** in `public/.well-known/apple-app-site-association` with your Apple Team ID (10 characters, from [developer.apple.com](https://developer.apple.com) → Membership).
-2. **Bundle ID** is set to `com.singhts.menumiserapp` (from your Play Store link). If your iOS app uses a different bundle ID, change it in the AASA file.
+2. **Bundle ID** is set to `com.singhts.menumiserapp`. If your iOS app uses a different bundle ID, change it in the AASA file.
 3. **In Xcode:** Add the **Associated Domains** capability with:
    - `applinks:menumiser.co` (and `applinks:www.menumiser.co` if you use www)
    - `webcredentials:menumiser.co` (if you use web credentials)

@@ -30,7 +30,7 @@ const sections: { title: string; faqs: { q: string; a: string | string[] }[] }[]
       },
       {
         q: "What platforms is Menu Miser available on?",
-        a: "Menu Miser is available on Android. iOS support will come based on demand.",
+        a: "Menu Miser is available on iOS.",
       },
     ],
   },
@@ -88,7 +88,7 @@ const sections: { title: string; faqs: { q: string; a: string | string[] }[] }[]
       },
       {
         q: "Can I cancel my subscription anytime?",
-        a: "Yes. Cancel anytime through your app store settings (Google Play Store or Apple App Store). You'll retain access until the end of your billing period.",
+        a: "Yes. Cancel anytime through your Apple App Store settings. You'll retain access until the end of your billing period.",
       },
       {
         q: "Do subscriptions auto-renew?",
@@ -96,7 +96,7 @@ const sections: { title: string; faqs: { q: string; a: string | string[] }[] }[]
       },
       {
         q: "Can I get a refund?",
-        a: "Refunds are handled by your app store (Google Play or Apple App Store) according to their refund policies. Email us or submit feedback through the app if you have issues.",
+        a: "Refunds are handled by the Apple App Store according to their refund policies. Email us or submit feedback through the app if you have issues.",
       },
     ],
   },
@@ -167,7 +167,6 @@ const sections: { title: string; faqs: { q: string; a: string | string[] }[] }[]
         a: [
           "Update to the latest version",
           "Restart the app",
-          "Clear app cache (Android: Settings → Apps → Menu Miser → Clear Cache)",
           "Reinstall if issues persist",
           "Email us or submit feedback with error details",
         ],
@@ -271,7 +270,7 @@ const sections: { title: string; faqs: { q: string; a: string | string[] }[] }[]
       },
       {
         q: "Where can I leave a review?",
-        a: "Rate and review Menu Miser in the Google Play Store or Apple App Store. Your feedback helps us improve.",
+        a: "Rate and review Menu Miser in the Apple App Store. Your feedback helps us improve.",
       },
     ],
   },

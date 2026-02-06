@@ -57,7 +57,7 @@ export default function TermsPage() {
             <li>A valid email address</li>
             <li>A secure password, or</li>
             <li>Authentication through Google Sign-In</li>
-            <li>Authentication through Apple Sign-In (only on iOS)</li>
+            <li>Authentication through Apple Sign-In</li>
           </ul>
           <p className="mt-2 leading-relaxed">
             You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
@@ -115,7 +115,6 @@ export default function TermsPage() {
           <h3 className="mt-4 text-lg font-medium text-white">5.2 Payment Processing</h3>
           <p className="mt-1 leading-relaxed">Payments are processed through:</p>
           <ul className="mt-2 list-inside list-disc space-y-1 leading-relaxed">
-            <li>Google Play Services (for Android devices)</li>
             <li>Apple ID (for iOS devices)</li>
             <li>RevenueCat (for subscription management)</li>
           </ul>
@@ -132,7 +131,7 @@ export default function TermsPage() {
           </p>
           <h3 className="mt-4 text-lg font-medium text-white">5.5 Refunds</h3>
           <p className="mt-1 leading-relaxed">
-            Refund policies are governed by Google Play Store and Apple App Store policies. We do not provide direct refunds. Please contact your app store for refund requests.
+            Refund policies are governed by Apple App Store policies. We do not provide direct refunds. Please contact Apple for refund requests.
           </p>
           <h3 className="mt-4 text-lg font-medium text-white">5.6 Price Changes</h3>
           <p className="mt-1 leading-relaxed">
@@ -245,7 +244,7 @@ export default function TermsPage() {
           <h2 className="text-xl font-semibold text-white">10. Account Termination</h2>
           <h3 className="mt-4 text-lg font-medium text-white">10.1 Termination by You</h3>
           <p className="mt-1 leading-relaxed">
-            You may delete your account at any time through the App settings. Upon account deletion: all your personal data and user-generated content will be permanently deleted immediately, except as noted below; your email address will be retained for 7 days for abuse prevention purposes, then permanently deleted; your subscription (if active) will not be cancelled automatically and can be cancelled through App Store or Play Store.
+            You may delete your account at any time through the App settings. Upon account deletion: all your personal data and user-generated content will be permanently deleted immediately, except as noted below; your email address will be retained for 7 days for abuse prevention purposes, then permanently deleted; your subscription (if active) will not be cancelled automatically and can be cancelled through Apple App Store.
           </p>
           <h3 className="mt-4 text-lg font-medium text-white">10.2 Termination by Us</h3>
           <p className="mt-1 leading-relaxed">
@@ -260,7 +259,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-semibold text-white">11. Third-Party Services</h2>
           <p className="mt-2 leading-relaxed">
-            The Service relies on third-party services, including: Supabase (database, authentication, storage); OpenAI (AI meal plan and recipe generation); RevenueCat (subscription management); Google Play Services (payment processing for Android); Apple App Store (payment processing for iOS); Aptabase (tracking user interactions); Sentry (debugging and error analysis).
+            The Service relies on third-party services, including: Supabase (database, authentication, storage); OpenAI (AI meal plan and recipe generation); RevenueCat (subscription management); Apple App Store (payment processing for iOS); Aptabase (tracking user interactions); Sentry (debugging and error analysis).
           </p>
           <p className="mt-2 leading-relaxed">
             We are not responsible for the availability, performance, or policies of these third-party services. Your use of third-party services is subject to their respective terms and conditions.

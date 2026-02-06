@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
             <li><strong className="text-white">Generate Meal Plans:</strong> Your dietary restrictions, allergies, pantry items, family size, budget, and meal preferences are sent to our AI provider (OpenAI) to generate personalized recipes and meal plans.</li>
             <li><strong className="text-white">Extract Ingredients from Images:</strong> When you use the pantry scanning feature, we send your image to OpenAI Vision API to extract ingredient names. The image is then immediately deleted.</li>
             <li><strong className="text-white">Manage Subscriptions:</strong> We use RevenueCat to validate and manage your &quot;Pro&quot; subscription status and purchase history.</li>
-            <li><strong className="text-white">Process Payments:</strong> We use Google Play Services (on Android) and Apple App Store (on iOS) to process in-app subscription payments.</li>
+            <li><strong className="text-white">Process Payments:</strong> We use the Apple App Store (on iOS) to process in-app subscription payments.</li>
             <li><strong className="text-white">Improve the App:</strong> We use usage data to understand how users interact with the app and to identify bugs and areas for improvement.</li>
             <li><strong className="text-white">Communication:</strong> To send you push notifications regarding your meal plan status (e.g., when a plan is ready or if generation failed).</li>
             <li><strong className="text-white">Prevent Abuse:</strong> We maintain a record of deleted account emails for 7 days after account deletion to prevent abuse through account deletion and recreation.</li>
@@ -96,7 +96,6 @@ export default function PrivacyPolicyPage() {
             <li><strong className="text-white">Supabase:</strong> Used for secure database hosting, authentication, and temporary file storage. Supabase stores your account information, profile data, pantry items, meal plans, and other app data. Supabase is located in the United States.</li>
             <li><strong className="text-white">OpenAI:</strong> We send text prompts (including your dietary preferences, pantry list, family size, budget, and meal preferences) and temporary image data to OpenAI to generate meal plans and extract ingredients. OpenAI does not use data submitted via our API to train their models by default. OpenAI is located in the United States.</li>
             <li><strong className="text-white">RevenueCat:</strong> Used to process and manage in-app subscriptions and purchase history. RevenueCat receives your subscription status and purchase information. RevenueCat is located in the United States.</li>
-            <li><strong className="text-white">Google Play Services:</strong> Used for processing payments on Android devices. Google receives payment information necessary to process your subscription.</li>
             <li><strong className="text-white">Apple:</strong> Used for processing payments on iOS devices. Apple receives payment information necessary to process your subscription.</li>
             <li><strong className="text-white">Aptabase:</strong> Used for tracking user interactions with the app to understand user behaviour.</li>
             <li><strong className="text-white">Sentry:</strong> Used for debugging and analyzing errors occurred in the app.</li>
@@ -214,7 +213,7 @@ export default function PrivacyPolicyPage() {
             We do not track your online activities across third-party websites or services. The information we collect is limited to what you provide directly or what is necessary for Menu Miser to function.
           </p>
           <p className="mt-2 leading-relaxed">
-            Third parties that provide services to Menu Miser (Supabase, OpenAI, RevenueCat, Google Play Services, Apple App Store) may collect information necessary for their services, but they do not track your activities across different websites or services beyond what is required for Menu Miser to operate.
+            Third parties that provide services to Menu Miser (Supabase, OpenAI, RevenueCat, Apple App Store) may collect information necessary for their services, but they do not track your activities across different websites or services beyond what is required for Menu Miser to operate.
           </p>
         </section>
 
