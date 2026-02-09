@@ -4,9 +4,43 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Blog – Menu Miser",
   description: "Learn how to save money on groceries, reduce food waste, and master meal planning with AI.",
+  alternates: {
+    canonical: "https://menumiser.co/blog",
+  },
+  openGraph: {
+    title: "Blog – Menu Miser",
+    description: "Tips, tricks, and guides for smarter meal planning, reducing grocery bills, and cooking with AI.",
+    url: "https://menumiser.co/blog",
+    siteName: "Menu Miser",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog – Menu Miser",
+    description: "Tips, tricks, and guides for smarter meal planning, reducing grocery bills, and cooking with AI.",
+  },
 };
 
 const blogPosts = [
+  {
+    title: "Stuck in a Recipe Rut? Let AI Switch Things Up",
+    slug: "ai-recipe-swap-meal-variety",
+    date: "February 2026",
+    description: "Most people rotate the same 7-10 meals on repeat. Learn how AI-powered recipe swapping and smart suggestions break the cycle without the overwhelm.",
+  },
+  {
+    title: "The Real Cost of Not Having a Grocery Plan",
+    slug: "real-cost-of-no-grocery-plan",
+    date: "February 2026",
+    description: "Impulse buys, food waste, and takeout add up fast. See how a smart meal plan with AI-generated shopping lists can slash your weekly grocery bills.",
+  },
+  {
+    title: "Stop Staring at Your Fridge: How AI Turns What You Have Into What You Want",
+    slug: "ai-recipes-from-your-pantry",
+    date: "February 2026",
+    description: "Discover how Menu Miser's AI reads your pantry and generates creative recipes, quick meals, and full weekly plans from ingredients you already own.",
+  },
   {
     title: "How to Save $100/Month on Groceries with Smarter Planning",
     slug: "how-to-save-money-on-groceries",

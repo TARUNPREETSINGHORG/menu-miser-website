@@ -1,14 +1,65 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const title = "How to Save $100/Month on Groceries with Smarter Planning";
+const description = "Learn how smarter meal planning and using your pantry can save you $100 or more every month on groceries.";
+const slug = "how-to-save-money-on-groceries";
+const publishDate = "2026-02-04";
+
 export const metadata: Metadata = {
-  title: "How to Save $100/Month on Groceries – Menu Miser Blog",
-  description: "Learn how smarter meal planning and using your pantry can save you $100 or more every month on groceries.",
+  title: `${title} – Menu Miser Blog`,
+  description,
+  alternates: {
+    canonical: `https://menumiser.co/blog/${slug}`,
+  },
+  openGraph: {
+    title,
+    description,
+    url: `https://menumiser.co/blog/${slug}`,
+    siteName: "Menu Miser",
+    locale: "en_US",
+    type: "article",
+    publishedTime: publishDate,
+    authors: ["Menu Miser"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function BlogPost() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    datePublished: publishDate,
+    dateModified: publishDate,
+    author: {
+      "@type": "Organization",
+      name: "Menu Miser",
+      url: "https://menumiser.co",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Menu Miser",
+      url: "https://menumiser.co",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://menumiser.co/blog/${slug}`,
+    },
+  };
+
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <Link href="/blog" className="text-sm font-medium text-[var(--orange)] hover:underline flex items-center gap-1 mb-8">
         <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" className="h-4 w-4 stroke-current">
           <path d="M9.25 10.25 6.75 8l2.5-2.25" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -56,5 +107,6 @@ export default function BlogPost() {
         </div>
       </div>
     </article>
+    </>
   );
 }

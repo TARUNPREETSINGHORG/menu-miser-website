@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://menumiser.co"),
   title: "Menu Miser – AI Meal Planner & Pantry Recipe App",
   description:
     "Save money and reduce food waste with Menu Miser. Get AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant—all in one app.",
@@ -46,6 +47,9 @@ export const metadata: Metadata = {
     initialScale: 1,
     maximumScale: 5,
   },
+  alternates: {
+    canonical: "https://menumiser.co",
+  },
   openGraph: {
     title: "Menu Miser – AI Meal Planner & Pantry Recipe App",
     description:
@@ -68,6 +72,9 @@ export const metadata: Metadata = {
     title: "Menu Miser – AI Meal Planner & Pantry Recipe App",
     description: "Save money and reduce food waste. AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant.",
     images: ["/icon.png"],
+  },
+  other: {
+    "theme-color": "#f97316",
   },
 };
 
