@@ -72,7 +72,7 @@ export default function BlogPost() {
           The Real Cost of Not Having a Grocery Plan
         </h1>
         <time dateTime="2026-02" className="order-first mb-4 text-base text-[var(--text-muted)]">
-          February 16, 2026
+          February 09, 2026
         </time>
       </header>
 
