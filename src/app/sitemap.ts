@@ -63,13 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/real-cost-of-no-grocery-plan`,
-      lastModified: new Date("2026-02-16"),
+      lastModified: new Date("2026-02-09"),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/ai-recipe-swap-meal-variety`,
-      lastModified: new Date("2026-02-23"),
+      lastModified: new Date("2026-02-09"),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     },
