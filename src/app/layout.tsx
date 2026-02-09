@@ -21,9 +21,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Menu Miser – Your Personal Meal Planning Assistant",
+  title: "Menu Miser – AI Meal Planner & Pantry Recipe App",
   description:
-    "Save time, money, and stress. AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant—all in one app.",
+    "Save money and reduce food waste with Menu Miser. Get AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant—all in one app.",
+  keywords: [
+    "AI meal planner",
+    "pantry recipe app",
+    "reduce food waste",
+    "save money on groceries",
+    "meal planning assistant",
+    "personalized recipes",
+    "cooking assistant",
+    "weekly meal plans",
+  ],
+  itunes: {
+    appId: "6758177930",
+  },
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
@@ -34,10 +47,27 @@ export const metadata: Metadata = {
     maximumScale: 5,
   },
   openGraph: {
-    title: "Menu Miser – Your Personal Meal Planning Assistant",
+    title: "Menu Miser – AI Meal Planner & Pantry Recipe App",
     description:
-      "Save time, money, and stress. AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant.",
-    images: [{ url: "/icon.png", width: 512, height: 512, alt: "Menu Miser" }],
+      "Save money and reduce food waste. AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant.",
+    url: "https://menumiser.co",
+    siteName: "Menu Miser",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/icon.png",
+        width: 512,
+        height: 512,
+        alt: "Menu Miser App Icon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Menu Miser – AI Meal Planner & Pantry Recipe App",
+    description: "Save money and reduce food waste. AI-powered meal plans from your pantry, quick recipes, and a kitchen assistant.",
+    images: ["/icon.png"],
   },
 };
 
